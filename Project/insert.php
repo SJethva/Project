@@ -6,7 +6,7 @@
     exit;
   } 
   $user_id="";
-  $name="";
+  $movie_name="";
   $actor="";
   $actress="";
   $director="";
@@ -22,7 +22,7 @@
 
       while($total=$result->fetch_assoc())
       {
-        $name=$total['movie_name'];
+        $movie_name=$total['movie_name'];
         $actor=$total['actor'];   
         $actress=$total['actress']; 
         $director=$total['director']; 
@@ -63,7 +63,7 @@
                 method="POST">
                   <div class="form-group">
                     <label for="user">Name</label>
-                    <input type="text" name="name" id="name" class="form-control" autocomplete="off" value="<?=$name?>"> 
+                    <input type="text" name="movie_name" id="movie_name" class="form-control" autocomplete="off" value="<?=$movie_name?>"> 
                   </div>
 
                   <div class="form-group">
